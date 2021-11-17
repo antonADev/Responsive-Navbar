@@ -1,0 +1,131 @@
+:root {
+    --transition: all 0.3s linear;
+  }
+  
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #abf8f8;
+    line-height: 1.7em;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  nav {
+    top: 0;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Navbar */
+  
+  .nav-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .navbar-links a {
+    font-size: 1rem;
+    text-transform: capitalize;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+  }
+  
+  .navbar-links a:hover {
+    padding-left: 1.5rem;
+  }
+  
+  .navbar-links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  .show-links {
+    height: 10rem;
+    margin-bottom: 20px;
+  }
+  
+  .nav-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    transition: var(--transition);
+  }
+  
+  .nav-toggle:hover {
+    transform: rotate(90deg);
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    .navbar-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .navbar-links {
+      height: auto;
+      display: flex;
+    }
+    .navbar-links a {
+      padding: 0;
+      margin: 0 1rem;
+    }
+
+    .navbar-links a:hover {
+        padding: 0;
+        background: transparent;
+      }
+
+    .social-icons {
+        display: flex;
+      }
+      .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--clr-primary-5);
+        transition: var(--transition);
+      }
+      .social-icons a:hover {
+        color: var(--clr-primary-7);
+      }
+  }
